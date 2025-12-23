@@ -59,8 +59,8 @@ Now all we have to do is make this open and close really quickly at the press of
 Some pictures below showing the testing/WIP state using a breadboard:
 
 ![proto type picture](/assets/wip1.JPG)
-![proto type picture](/assets/wip2.JPG)
-![proto type picture](/assets/wip3.JPG)
+![proto type picture](/assets/wip2.jpg)
+![proto type picture](/assets/wip3.jpg)
 
 
 ### Industrialization
@@ -125,7 +125,9 @@ Time to solder. Order doesn't matter but make sure you leave enough rooms so you
 1. You are going to want to test this. Plug in a USB cable into the ESP32 and press the button. You should be able to hear some rapid fire click inside the relay (assuming you have a non solid state one). You may also be able to see the debug light flash if your relay has that functionality. If you have an oscilliscope or multimeter, you can also place your pins between NC and COM and see some signal fluctuations between 0V and 5V.
 *If you do not see this, something is either wrong with your wiring. Ensure that the GPIO pins match the same routes as above and that your solder lines do not happen to accidently touch one another. If a GPIO pins is wrongly mapped, you can always reflash the software with the correct pin updated in the code.
 
-![testing footage of flash2pass](/assets/testing.MOV)
+<video width="500" height="350" controls>
+  <source src="/assets/testing.mov" type="video/mp4">
+</video>
 
 2. 3D print `flash2pass_box.STEP` and `flash2pass_lid.STEP` under `/models`. Once 3D printed clean up any stary filaments and sand down if necessary.
 3. Insert the protoboard into the box. Ensure that your ports are facing the open sided hole of the box. It will be a tight fit. I used a ruler to push down on the board. It will eventually reach the bottom on the poles and the board should line up with the bottom of the hole exposiong the IO ports.
