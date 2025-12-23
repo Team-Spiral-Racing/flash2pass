@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    color: var(--font-color);
+    background-color: var(--primary);
+    overflow-x: hidden;
+
+    /* Color vars */
+    --primary: #2a2729;
+    --secondary: #302c2e;
+    --border: rgb(55, 52, 59);
+    --highlight: rgb(163, 90, 132);
+    --fastest: rgb(174, 62, 201);
+    --font-color: white;
+    --subdued: rgb(101, 93, 98);
+
+    /* Size vars */
+    --central-width: calc(min(90%, 1500px) - 3.5rem);
+}
+
+main {
+    width: var(--central-width);
+    margin: 5vh auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 1rem 0 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: var(--highlight);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+a, a:visited {
+    color: var(--highlight);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--fastest);
+}
+
+li {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+ol {
+    margin: 1.5rem 0;
+}
+
+ul {
+    margin: 1.5rem 0;
+}
+
+blockquote {
+    border-left: 4px solid var(--highlight);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--font-color);
+}
+
+blockquote p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: 400;
+}
+
+blockquote ul {
+    margin: 0.5rem 0;
+}
+
+blockquote li {
+    margin: 0.3rem 0 0.3rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+blockquote a, blockquote a:visited {
+    color: var(--highlight);
+    font-size: 1.1rem;
+}
+
+code {
+    background-color: var(--secondary);
+    color: var(--fastest);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+.toc {
+    background-color: var(--secondary);
+    border-left: 4px solid var(--highlight);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+
+.toc h2 {
+    color: var(--highlight);
+    margin-top: 0;
+}
+
+.toc ul {
+    margin: 0.5rem 0;
+}
+
+.toc li {
+    margin: 0.3rem 0 0.3rem 1.5rem;
+    font-size: 1rem;
+}
+
+.toc ul ul {
+    margin: 0.3rem 0;
+}
+
+.toc ul ul li {
+    font-size: 0.95rem;
+    margin-left: 1.5rem;
+}
+
+.section {
+    margin: 4rem 0;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: block;
+}
+
+.content-image:hover {
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: block;
+}
+
+.image-gallery a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.caption {
+    font-style: italic;
+    color: var(--subdued);
+    margin: 0.5rem 0 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.content-video {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: block;
+}
+
+#logo {
+    margin-top: 2rem;
+    height: 8vh;
+    max-width: 100%;
+}
+
+span {
+    display: block;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    color: #A8A8A8;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        margin: 3vh auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.8rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+        margin: 0.6rem 0;
+    }
+
+    blockquote p {
+        font-size: 1rem;
+    }
+
+    blockquote li {
+        font-size: 1rem;
+    }
+
+    blockquote a {
+        font-size: 1rem;
+    }
+
+    .toc {
+        padding: 1rem;
+    }
+
+    .toc h2 {
+        font-size: 1.3rem;
+    }
+
+    .toc li {
+        font-size: 0.9rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .content-video {
+        width: 100%;
+    }
+
+    #logo {
+        height: 6vh;
+    }
+
+    code {
+        font-size: 0.85rem;
+    }
+}
